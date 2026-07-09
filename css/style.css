@@ -1,0 +1,18 @@
+.hero {
+  width: 100%;
+  min-height: 600px;
+  background-image: url("../assets/img/backgrouds/Hero.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-title {
+  position: absolute;
+  font-size: 6rem;
+  font-weight: var(--fw-medium);
+  font-family: var(--font-title);
+
+  color: #ff00c3;
+  top: 20%;
+  margin-left: 10%;
+}

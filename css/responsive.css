@@ -1,0 +1,50 @@
+/* =====================================================
+   RESPONSIVE.CSS
+   Mobile First
+===================================================== */
+
+/* ==========================================
+   TABLETS
+   768px en adelante
+========================================== */
+
+@media screen and (min-width: 768px) {
+  body {
+    background: var(--bg-gradient);
+    position: relative;
+    font-size: 1rem;
+  }
+
+  .envelope {
+    position: relative;
+    width: 70%;
+  }
+}
+
+/* ==========================================
+   LAPTOPS
+   1024px en adelante
+========================================== */
+
+@media screen and (min-width: 1024px) {
+  .envelope {
+    position: relative;
+    width: 55%;
+  }
+}
+
+/* ==========================================
+   DESKTOP
+   1280px en adelante
+========================================== */
+
+@media screen and (min-width: 1280px) {
+}
+
+/* ==========================================
+   PANTALLAS GRANDES
+   1440px en adelante
+========================================== */
+
+@media screen and (min-width: 1440px) {
+}

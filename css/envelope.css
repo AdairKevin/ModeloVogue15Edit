@@ -1,0 +1,164 @@
+/* =========================================
+   PANTALLA Y FONDO DESENFOCADO
+========================================= */
+.envelope-screen {
+  position: fixed;
+  inset: 0;
+  background-image: url("../assets/img/envelope/fondoSobre\ \(2\).jpg");
+  background-size: contain;
+  background-position: center;
+  background-color: rgb(235, 225, 225);
+  backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+/* =========================================
+   CONTENEDOR DEL SOBRE (Proporción Editorial)
+========================================= */
+.envelope {
+  position: relative;
+  width: 300px; /* Más estilizado */
+  height: 250px; /* Proporción más alta, tipo tarjeta de lujo */
+  border-radius: 5px;
+  background-color: #e9d9d9; /* Color del INTERIOR del sobre (más oscuro) */
+  background-image: url("../assets/img/envelope/textura\ papel.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply;
+
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.878); /* Sombra flotante */
+}
+
+/* =========================================
+   CUERPO DEL SOBRE (Bolsillo inferior)
+========================================= */
+.envelope::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #fff5f5; /* Color exterior del papel (rosa empolvado claro) */
+  border-radius: 5px;
+
+  background-image: url("../assets/img/envelope/textura\ papel.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply;
+
+  /* Cortamos la forma para que simule un bolsillo elegante cerrado a los lados */
+  clip-path: polygon(0 0, 50% 48%, 100% 0, 100% 100%, 0 100%);
+  z-index: 2;
+}
+
+/* =========================================
+   SOLAPA SUPERIOR (La que se anima)
+========================================= */
+.envelope-flap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 58%; /* Baja justo por debajo del centro */
+  background-color: #fffefe;
+
+  background-image: url("../assets/img/envelope/textura\ papel.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply;
+
+  /* Un poquito de transparencia para que se vea el interior */
+  border-radius: 6px 6px 0 0;
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+  transform-origin: top;
+  transition: transform 1.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+  z-index: 5;
+
+  /* Sombra proyectada que le da el realismo al papel superpuesto */
+  filter: drop-shadow(0 8px 12px rgb(0, 0, 0));
+}
+
+/* =========================================
+   FAJA DE VITELA TRANSLÚCIDA
+========================================= */
+.envelope::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -2%; /* Sobresale un poquitito a los lados para dar efecto 3D */
+  width: 104%;
+  height: 90px;
+  transform: translateY(-50%);
+
+  /* Efecto de papel cebolla / cristal esmerilado */
+  background: rgba(255, 255, 255, 0.192);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border-top: 1px solid rgba(255, 203, 203, 0.9);
+  border-bottom: 1px solid rgba(255, 211, 211, 0.9);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+
+  pointer-events: none; /* Para que el clic pase al sello */
+  z-index: 4;
+}
+
+/* =========================================
+   SELLO DE CERA METÁLICO
+========================================= */
+.wax-seal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+
+  background-color: #ffe1e1; /* Color base del sello (rojo oscuro) */
+  background-image: url("../assets/img/envelope/selloV.png");
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+
+  /* Sombras para que el sello no se vea plano sobre la faja */
+  box-shadow:
+    0 12px 24px rgba(0, 0, 0, 0.619),
+    inset 0 2px 4px rgba(255, 0, 0, 0.4);
+
+  cursor: pointer;
+  z-index: 6;
+  transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.wax-seal:hover {
+  transform: translate(-50%, -50%) scale(1.08); /* Crece un poco al pasar el dedo */
+}
+
+/* =========================================
+   ANIMACIONES JS
+========================================= */
+.envelope.open .envelope-flap {
+  transform: rotateX(180deg);
+  z-index: 1; /* Se esconde detrás para no tapar el contenido */
+}
+
+.envelope-screen.fade-out {
+  animation: fadeOut 1.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: scale(1.05); /* Zoom sutil de despedida */
+    visibility: hidden;
+  }
+}
+
+.hidden {
+  display: none !important;
+}
