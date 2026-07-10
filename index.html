@@ -29,6 +29,7 @@
 
     <div class="invitation-content hidden" id="invitationContent">
       <div class="container">
+
         <!-- =========================
             MÚSICA
     ========================== -->
@@ -36,28 +37,72 @@
           <source src="./assets/music/background.mp3" type="audio/mpeg" />
           Tu navegador no soporta el elemento de audio.
         </audio>
+
         <!-- =========================
             PORTADA
     ========================== -->
         <section id="hero">
           <div class="hero">
-            <h1 class="hero-title">
+            
+          </div>
+
+          <div class="hero-content">
+           <div class="hero-text">
+             <h1 class="hero-title">
               Its <br />
               Party <br />
               Time!
             </h1>
+            <h2 class="hero-name">
+              NYAH
+            </h2>
+            <p class="hero-edition">
+              THE XV EDITION
+            </p>
+           </div>
           </div>
         </section>
 
         <!-- =========================
-        MENSAJE DE BIENVENIDA
+        FOTOS PRINCIPALES
     ========================== -->
-        <section id="welcome">hola</section>
+        <section id="fotos-principales">
+          <div class="container-fotos">
+            <img src="./assets/img/fotos/foto1.jpg" alt="Foto 1" />
+            <img src="./assets/img/fotos/foto2.jpg" alt="Foto 2" />
+          </div>
+        </section>
 
         <!-- =========================
         CUENTA REGRESIVA
     ========================== -->
-        <section id="countdown"></section>
+        <section id="countdown">
+          <div class="fecha">
+            <h1>SABADO</h1>
+            <h2>JUNIO 25, 2027</h2>
+          </div>
+          <div class="timer">
+          <h1 class="timer-titulo">Solo faltan:</h1>
+          <ul class="date-time">
+            <li>
+              <div class="time_number" id="dias"></div>
+              <div class="time_txt">Dias</div>
+            </li>
+            <li>
+              <div class="time_number" id="horas"></div>
+              <div class="time_txt">Hrs</div>
+            </li>
+            <li>
+              <div class="time_number" id="minutos"></div>
+              <div class="time_txt">Min</div>
+            </li>
+            <li>
+              <div class="time_number" id="segundos"></div>
+              <div class="time_txt">Seg</div>
+            </li>
+          </ul>
+        </div>
+        </section>
 
         <!-- =========================
         HISTORIA / MENSAJE

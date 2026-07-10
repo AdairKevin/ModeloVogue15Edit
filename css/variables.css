@@ -2,27 +2,28 @@
    VARIABLES.CSS
    Design System
 ===================================================== */
+
 @import url("https://fonts.googleapis.com/css2?family=Playball&display=swap");
+@import url('https://fonts.cdnfonts.com/css/vogue');
+
 :root {
   /*=========================================
       COLORES
     =========================================*/
 
-  --color-primary: #d88ca8; /* Rosa editorial */
-  --color-secondary: #f8e8ee; /* Rosa pastel elegante */
-  --color-accent: #c9a44c; /* Dorado lujo */
+  --color-primary: #F8B6C9; /* Blush rosa suave */
+  --color-secondary: #F06292; /* Rosa medio sofisticado */
+  --color-accent: #e7437a; /* Fucsia elegante */
 
-  --color-background: #fff9fb; /* Blanco rosado */
-  --color-surface: #ffffff; /* Tarjetas limpias */
-
-  --color-title: #2b2b2b; /* Negro editorial */
-  --color-text: #666666; /* Gris elegante */
-  --color-text-light: #a8a8a8; /* Texto secundario */
+  --color-title: #fffafa; 
+  
+  --color-text: #ff00f2; /* Gris elegante */
+  --color-text-light: #ffe7e7; /* Texto secundario */
 
   --color-white: #ffffff;
   --color-black: #000000;
 
-  --bg-body: #ffe7e7;
+  
 
   /*=========================================
       TIPOGRAFÍAS
@@ -30,9 +31,9 @@
 
   --font-title: "Playball", cursive;
 
-  --font-subtitle: "Montserrat", sans-serif;
+  --font-subtitle: 'Vogue', sans-serif ;
 
-  --font-body: "Montserrat", sans-serif;
+  --font-body: 'Bodoni Moda', serif;
 
   /*=========================================
       PESO DE FUENTE
@@ -72,7 +73,7 @@
   --shadow-md: 0 6px 18px rgba(0, 0, 0, 0.12);
   --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.18);
   --shadow-float: 0 8px 24px rgba(0, 0, 0, 0.16);
-  --shadow-text: 0 2px 8px rgba(0, 0, 0, 0.35);
+  --shadow-text: 0 2px 8px rgba(0, 0, 0, 0.623);
 
   /*=========================================
       TRANSICIONES
@@ -117,8 +118,9 @@
   /*=========================================
       FONDOS GENERALES
     =========================================*/
-
-  --gradient-background: linear-gradient(180deg, #ffffff 0%, #f8f5f0 100%);
+  --bg-body: #fdf6f6;
+  
+  --gradient-background: linear-gradient(180deg, #ffc7ff 0%, #ff3bf5 100%);
 
   --gradient-background-soft: linear-gradient(180deg, #fafafa 0%, #eeeeee 100%);
 

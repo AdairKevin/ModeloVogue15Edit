@@ -10,9 +10,15 @@
 
 @media screen and (min-width: 768px) {
   body {
-    background: var(--bg-gradient);
+    background: var(--bg-body);
     position: relative;
+    padding: 3rem;
     font-size: 1rem;
+  }
+
+  .container {
+    width: 600px;
+    position: relative;
   }
 
   .envelope {

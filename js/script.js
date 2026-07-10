@@ -19,7 +19,7 @@ const second = 1000,
   hour = minute * 60,
   day = hour * 24;
 
-let countDown = new Date("Sep 21, 2025 18:00:10").getTime(),
+let countDown = new Date("Jun 25, 2027 17:00:00").getTime(),
   x = setInterval(function () {
     let now = new Date().getTime(),
       distance = countDown - now;
@@ -53,6 +53,7 @@ if (segundos == 0) {
     (document.getElementById("minutos").innerText = "00"),
     (document.getElementById("segundos").innerText = "00"));
 }
+
 
 /* Script para el reproductor de música */
 const audio = document.getElementById("audio");
