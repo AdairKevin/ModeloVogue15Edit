@@ -7,92 +7,79 @@
   background-image: url("../assets/img/backgrouds/fondoV.jpg");
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat; 
+  background-repeat: no-repeat;
   overflow: hidden;
 
-  -webkit-mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
-  mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 30%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 30%, transparent 100%);
 
   z-index: -999;
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  top: -15%;
-  left: 5%;
-
-  width: 100%;     
-  height: 100%;
-
-  background-image: url("../assets/img/backgrouds/Hero.png");
-  background-size: cover; 
-  background-position: top left;
-  background-repeat: no-repeat;
 }
 
 .hero::after {
   content: "";
   position: absolute;
-  top:  70%;
-  left: 0;
+  top: 5%;
+  left: 32%;
 
-  width: 50%;      
-  height: 50%;
+  width: 80%;
+  height: 80%;
 
   background-image: url("../assets/icons/champ.png");
-  background-size: cover; 
+  background-size: contain;
   background-position: bottom right;
   background-repeat: no-repeat;
-
-  z-index: -1; 
+  transform: rotate(-30deg);
+  opacity: 1;
+  z-index: -1;
 }
 
 .hero-text {
   position: absolute;
-  top: 8%;
-  left: 10%;
+  top: 11%;
+  left: 2%;
   z-index: 10000;
 }
 
 .hero-title {
-  font-size: clamp(6rem, 10vw, 10rem);
+  font-size: clamp(6rem, 15vw, 12rem);
   font-weight: var(--fw-medium);
   font-family: var(--font-title);
   text-shadow: var(--shadow-text);
-  -webkit-text-stroke: 2px #ff9b9b;
-  color: var(--color-title);
+  -webkit-text-stroke: 0.5px #753869;
+  color: var(--color-black);
   margin-left: 10%;
-
 }
 
-.hero-name {
-  margin: 20px 0 0 0;
-  margin-left: 10%;
+/*========================================
+  Name
+========================================*/
+
+.name-xv {
+  width: 100%;
+  text-align: center;
+  margin-top: -50px;
+
   font-family: var(--font-subtitle);
-  font-size: clamp(2.5rem, 8vw, 5rem);
+  font-size: clamp(4.5rem, 10vw, 8rem);
   font-weight: 300;
   letter-spacing: 18px;
   text-transform: uppercase;
   color: var(--color-black);
-  text-shadow:
-    0 4px 15px rgba(0, 0, 0, 0.473);
-
-  z-index: 10000;
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.473);
 }
 
-
-.hero-edition {
+.edition-xv {
   width: 100%;
-  margin-left: 10%;
+  text-align: center;
+
   font-family: var(--font-subtitle);
-  font-size: clamp(1rem, 5vw, 2rem);
+  font-size: clamp(1.5rem, 5vw, 2rem);
   letter-spacing: 8px;
   color: var(--color-black);
-  opacity: .9;
+  opacity: 0.9;
   z-index: 10000;
 }
-
 
 .hero-edition::before {
   content: "";
@@ -111,7 +98,7 @@
   width: calc(100% - 2rem);
   margin: 0 auto;
   padding: 20px 20px 30px 20px;
-  background-color:var(--color-primary);
+  background-color: var(--color-primary);
 }
 
 .container-fotos img {
@@ -122,19 +109,17 @@
 
   border: 3px solid #ffffff;
 
-  box-shadow:
-    0 10px 25px rgba(0, 0, 0, 0.342);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.342);
 
-  transition: 
-    transform .4s ease,
-    box-shadow .4s ease;
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
 }
 
 .container-fotos {
   position: relative;
   overflow: hidden;
 }
-
 
 .container-fotos img:nth-child(even) {
   transform: translateY(10px);
@@ -156,7 +141,7 @@
 .timer-titulo {
   font-family: var(--font-subtitle);
   font-size: 1.5rem;
-  color: var(--color-accent); 
+  color: var(--color-accent);
   font-weight: 400;
   margin-bottom: 1.5rem;
   letter-spacing: 2px;
@@ -179,9 +164,9 @@
 }
 
 .date-time li:not(:last-child)::after {
-  content: '';
+  content: "";
   position: absolute;
-   right: -0.6rem;
+  right: -0.6rem;
   top: 50%;
   transform: translateY(-50%);
   height: 70%;
@@ -191,19 +176,19 @@
 
 .time_number {
   font-family: var(--font-body);
-  font-size: 2.5rem; 
-  color: var(--color-accent); 
+  font-size: 2.5rem;
+  color: var(--color-accent);
   font-weight: 700;
   line-height: 1;
   margin-bottom: 0.8rem;
 }
 
 .time_txt {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 0.65rem;
-  color: var(--color-black); 
+  color: var(--color-black);
   text-transform: uppercase;
-  letter-spacing: 4px; 
+  letter-spacing: 4px;
   font-weight: 500;
 }
 
@@ -211,11 +196,10 @@
   text-align: center;
   padding: 3rem 1rem;
   /* Un fondo blanco o transparente para que contraste con el rosa del contador */
-
 }
 
 .fecha h1 {
-  font-family: 'Bodoni Moda', serif;
+  font-family: "Bodoni Moda", serif;
   font-size: 2.8rem;
   color: #d63384; /* El rosa vibrante */
   font-weight: 400;
@@ -225,18 +209,17 @@
 }
 
 .fecha h2 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 0.7rem;
   color: #8a5a68; /* Rosa ceniza para la fecha */
   font-weight: 400;
   letter-spacing: 5px; /* Espaciado ultra ancho, muy característico de Vogue */
   text-transform: uppercase;
   margin: 0;
-  
+
   /* Enmarcamos la fecha con líneas finas arriba y abajo */
   display: inline-block;
   border-top: 1px solid #eebecb;
   border-bottom: 1px solid #eebecb;
   padding: 0.8rem 1.5rem;
 }
-
