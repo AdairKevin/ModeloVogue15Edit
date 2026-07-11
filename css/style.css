@@ -72,6 +72,7 @@
 .edition-xv {
   width: 100%;
   text-align: center;
+  margin-bottom: 10%;
 
   font-family: var(--font-subtitle);
   font-size: clamp(1.5rem, 5vw, 2rem);
@@ -81,10 +82,12 @@
   z-index: 10000;
 }
 
-.hero-edition::before {
+.edition-xv:before {
   content: "";
   display: block;
-  width: 100%;
+
+  transform: translateX(20%);
+  width: 70%;
   height: 1px;
   background: var(--color-black);
   margin-bottom: 12px;
@@ -129,97 +132,252 @@
   Contador
 =========================================*/
 #countdown {
-  text-align: center;
-  padding: 3rem 1rem;
-}
-
-.timer {
-  width: calc(100% - 2rem);
-  margin: 0 auto;
-}
-
-.timer-titulo {
-  font-family: var(--font-subtitle);
-  font-size: 1.5rem;
-  color: var(--color-accent);
-  font-weight: 400;
-  margin-bottom: 1.5rem;
-  letter-spacing: 2px;
-}
-
-.date-time {
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.date-time li {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   position: relative;
-}
-
-.date-time li:not(:last-child)::after {
-  content: "";
-  position: absolute;
-  right: -0.6rem;
-  top: 50%;
-  transform: translateY(-50%);
-  height: 70%;
-  width: 1px;
-  background-color: var(--color-accent);
-}
-
-.time_number {
-  font-family: var(--font-body);
-  font-size: 2.5rem;
-  color: var(--color-accent);
-  font-weight: 700;
-  line-height: 1;
-  margin-bottom: 0.8rem;
-}
-
-.time_txt {
-  font-family: "Montserrat", sans-serif;
-  font-size: 0.65rem;
-  color: var(--color-black);
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  font-weight: 500;
-}
-
-.fecha {
+  padding: 6rem 1.5rem;
   text-align: center;
-  padding: 3rem 1rem;
-  /* Un fondo blanco o transparente para que contraste con el rosa del contador */
+  background: linear-gradient(
+    180deg,
+    #f2fff2 0%,
+    #fff8fa 35%,
+    #fce8f0 50%,
+    #fdebf2 75%,
+    #fdf1f6 85%,
+    #f4f4f4 100%
+  );
+  overflow: hidden;
+}
+
+#countdown::before {
+  content: "MISXV";
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 7rem;
+  font-family: var(--font-title);
+  color: rgba(216, 140, 168, 0.145);
+  letter-spacing: 12px;
+  pointer-events: none;
 }
 
 .fecha h1 {
-  font-family: "Bodoni Moda", serif;
-  font-size: 2.8rem;
-  color: #d63384; /* El rosa vibrante */
-  font-weight: 400;
-  font-style: italic; /* La cursiva mantiene el lujo editorial */
-  margin: 0 0 1.5rem 0;
-  letter-spacing: 2px;
+  font-size: clamp(3.5rem, 10vw, 6rem);
+  font-family: var(--font-title);
+  color: var(--color-title);
+  letter-spacing: 8px;
+  text-transform: uppercase;
 }
 
 .fecha h2 {
-  font-family: "Montserrat", sans-serif;
-  font-size: 0.7rem;
-  color: #8a5a68; /* Rosa ceniza para la fecha */
-  font-weight: 400;
-  letter-spacing: 5px; /* Espaciado ultra ancho, muy característico de Vogue */
-  text-transform: uppercase;
-  margin: 0;
+  border: none;
+  padding: 0;
+  letter-spacing: 8px;
+  font-size: 0.9rem;
+  color: var(--color-secondary);
+  position: relative;
+}
 
-  /* Enmarcamos la fecha con líneas finas arriba y abajo */
+.fecha h2::before,
+.fecha h2::after {
+  content: "";
+
+  position: absolute;
+
+  top: 50%;
+
+  width: 70px;
+
+  height: 1px;
+
+  background: var(--color-accent);
+}
+
+.fecha h2::before {
+  right: 100%;
+  margin-right: 20px;
+}
+
+.fecha h2::after {
+  left: 100%;
+  margin-left: 20px;
+}
+
+.timer-titulo {
+  font-size: 0.75rem;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  color: var(--color-secondary);
+}
+
+.time_number {
+  font-size: 4rem;
+  font-family: var(--font-title);
+  color: var(--color-title);
+  font-weight: 400;
+}
+
+.time_txt {
+  font-size: 0.65rem;
+  letter-spacing: 5px;
+  color: var(--color-black);
+}
+
+.date-time li:not(:last-child)::after {
+  content: "•";
+  color: var(--color-accent);
+  font-size: 2rem;
+  background: none;
+  width: auto;
+  height: auto;
+  right: -18px;
+}
+
+/*=========================================
+  CALENDAR
+=========================================*/
+
+#calendar {
+  padding: 6rem 1.5rem;
+  text-align: center;
+  background: var(--bg-body);
+}
+
+.editorial-header {
+  margin-bottom: 3rem;
+}
+
+.editorial-tag {
+  display: block;
+
+  margin-bottom: 1rem;
+
+  font-size: 0.75rem;
+
+  font-family: var(--font-body);
+
+  letter-spacing: 8px;
+
+  text-transform: uppercase;
+
+  color: var(--color-primary);
+}
+
+.editorial-title {
+  font-family: var(--font-title);
+
+  font-size: clamp(3rem, 10vw, 5rem);
+
+  font-weight: 400;
+
+  letter-spacing: 4px;
+
+  color: var(--color-title);
+}
+
+/*============================
+CALENDARIO
+============================*/
+
+.calendar {
+  display: grid;
+
+  grid-template-columns: repeat(7, 1fr);
+
+  gap: 12px;
+
+  max-width: 420px;
+
+  margin: 0 auto 3rem;
+}
+
+.calendar div {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  aspect-ratio: 1;
+
+  font-family: var(--font-body);
+
+  font-size: 0.95rem;
+
+  color: var(--color-text);
+}
+
+.day-name {
+  font-size: 0.7rem !important;
+
+  font-weight: 600;
+
+  letter-spacing: 2px;
+
+  color: var(--color-primary) !important;
+}
+
+.empty {
+  visibility: hidden;
+}
+
+/*============================
+DÍA DEL EVENTO
+============================*/
+
+.event-day {
+  position: relative;
+
+  color: var(--color-white) !important;
+
+  font-weight: 600;
+
+  z-index: 1;
+}
+
+.event-day::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 2px;
+
+  border-radius: 50%;
+
+  background: var(--gradient-button);
+
+  box-shadow: 0 8px 20px rgba(216, 140, 168, 0.35);
+
+  z-index: -1;
+}
+
+/*============================
+BOTÓN
+============================*/
+
+.btn-calendar {
   display: inline-block;
-  border-top: 1px solid #eebecb;
-  border-bottom: 1px solid #eebecb;
-  padding: 0.8rem 1.5rem;
+
+  padding: 0.9rem 2.5rem;
+
+  border: 1px solid var(--color-accent);
+
+  color: var(--color-title);
+
+  text-decoration: none;
+
+  text-transform: uppercase;
+
+  letter-spacing: 4px;
+
+  font-size: 0.75rem;
+
+  font-family: var(--font-body);
+
+  transition: 0.35s;
+}
+
+.btn-calendar:hover {
+  background: var(--gradient-button);
+
+  color: var(--color-white);
 }

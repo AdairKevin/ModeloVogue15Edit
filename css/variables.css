@@ -13,15 +13,19 @@
 
   --color-primary: #f8b6c9; /* Blush rosa suave */
   --color-secondary: #f06292; /* Rosa medio sofisticado */
-  --color-accent: #e7437a; /* Fucsia elegante */
+  --color-accent: #ff2870; /* Fucsia elegante */
 
-  --color-title: #fffafa;
+  --color-title: #505050;
 
-  --color-text: #ff00f2; /* Gris elegante */
-  --color-text-light: #ffe7e7; /* Texto secundario */
+  --color-text: #44002b; /* Gris elegante */
+  --color-text-light: #ffa2df; /* Texto secundario */
 
   --color-white: #ffffff;
   --color-black: #000000;
+
+  --bg-body: #f4f4f4;
+  --bg-body-2: #ffcedc;
+  --card: #ff9bb7;
 
   /*=========================================
       TIPOGRAFÍAS
@@ -116,7 +120,6 @@
   /*=========================================
       FONDOS GENERALES
     =========================================*/
-  --bg-body: #fdf6f6;
 
   --gradient-background: linear-gradient(
     180deg,
