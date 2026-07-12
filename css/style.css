@@ -512,14 +512,13 @@ ARTÍCULO
 /* Letra capitular */
 
 .editorial-article p:first-child::first-letter{
-    float:left;
-    margin-right:14px;
-    margin-top:8px;
-    font-family:var(--font-title);
-    font-size:5.8rem;
-    line-height:.75;
-    color:var(--color-primary);
-
+  float:left;
+  margin-right:14px;
+  margin-top:8px;
+  font-family:var(--font-title);
+  font-size:5.8rem;
+  line-height:.75;
+  color:var(--color-primary);
 }
 
 
