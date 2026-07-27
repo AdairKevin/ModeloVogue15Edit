@@ -17,8 +17,8 @@
 
   --color-title: #3f3f3f;
 
-  --color-text: #44002b; /* Gris elegante */
-  --color-text-light: #ffa2df; /* Texto secundario */
+  --color-text: #000000; /* Gris elegante */
+  --color-primary-light: #fdd7e6; /* Texto secundario */
 
   --color-white: #ffffff;
   --color-black: #000000;
