@@ -1,0 +1,156 @@
+{
+  "_instrucciones": "Aquí se cambian TODOS los textos, fotos, links y datos de la invitación. Para ocultar una sección pon su clave en false (ejemplo: \"instagram\": false) o agrega \"mostrar\": false dentro de ella para conservar sus textos. Los textos aceptan <br /> para saltos de línea. La fecha de evento.inicio la usan la cuenta regresiva, el calendario y el botón de Google Calendar.",
+  "pagina": {
+    "titulo": "Invitación Digital"
+  },
+  "evento": {
+    "inicio": "2027-06-25T17:00",
+    "duracionHoras": 6,
+    "tituloCalendario": "Mis XV",
+    "detallesCalendario": "Te esperamos para celebrar mi gran día.",
+    "lugarCalendario": "Salón de Eventos Las Orquídeas"
+  },
+  "musica": {
+    "archivo": "./assets/music/background.mp3"
+  },
+  "portada": {
+    "titulo": "Its <br />Party <br />Time!",
+    "nombre": "NYAH",
+    "edicion": "XV EDITION",
+    "anio": "EST. 2027"
+  },
+  "bienvenida": {
+    "etiqueta": "EDITOR'S NOTE",
+    "texto": "Cada página guarda una historia. Cada detalle, un recuerdo. <br />Hoy comienza un capítulo inolvidable, y quiero compartirlo contigo."
+  },
+  "fotosPrincipales": [
+    { "foto": "./assets/img/fotos/foto1.jpg", "alt": "Foto 1" },
+    { "foto": "./assets/img/fotos/foto2.jpg", "alt": "Foto 2" }
+  ],
+  "cuentaRegresiva": {
+    "dia": "SABADO",
+    "fecha": "JUNIO 25, 2027",
+    "titulo": "Solo faltan:",
+    "dias": "Dias",
+    "horas": "Hrs",
+    "minutos": "Min",
+    "segundos": "Seg"
+  },
+  "calendario": {
+    "etiqueta": "SAVE THE DATE",
+    "titulo": "JUNIO 2027",
+    "diasSemana": ["LUN", "MAR", "MIE", "JUE", "VIE", "SAB", "DOM"],
+    "boton": "ADD TO CALENDAR"
+  },
+  "historia": {
+    "categoria": "ARTÍCULO PRINCIPAL",
+    "titulo": "Un nuevo capítulo comienza",
+    "subtitulo": "Edición Especial · Junio 2027",
+    "foto": "assets/img/fotos/foto2.jpg",
+    "fotoAlt": "Sesión editorial de NYAH",
+    "pieDeFoto": "NYAH · Fotografía oficial para la Edición XV · Primavera 2027",
+    "parrafos": [
+      "Hay momentos que llegan para transformar nuestra historia y convertirse en recuerdos que permanecerán para siempre. Después de tantos sueños, ilusiones y preparativos, por fin ha llegado el día de celebrar una etapa muy especial de mi vida.",
+      "Más que una fiesta, este será un instante lleno de emociones, sonrisas y personas que ocupan un lugar importante en mi corazón. Cada detalle ha sido preparado con cariño para compartir contigo una noche inolvidable.",
+      "Gracias por acompañarme a escribir esta nueva página. Tu presencia hará que esta edición sea aún más especial."
+    ]
+  },
+  "collage": [
+    "./assets/img/fotos/foto1.jpg",
+    "./assets/img/fotos/foto2.jpg",
+    "./assets/img/fotos/foto2.jpg",
+    "./assets/img/fotos/foto1.jpg"
+  ],
+  "familia": {
+    "subtitulo": "CON GRATITUD",
+    "titulo": "EN ESTE IMPORTANTE DIA",
+    "texto": "Este momento no sería el mismo sin el amor, la guía y el apoyo de quienes han caminado a nuestro lado. Gracias a nuestros padres y padrinos por acompañarnos y ser parte de esta historia.",
+    "grupos": [
+      { "titulo": "PADRES", "nombres": ["María Fernanda López", "José Luis Pérez"] },
+      { "titulo": "PADRINOS", "nombres": ["Patricia Gómez", "Ricardo Martínez"] }
+    ]
+  },
+  "cronograma": {
+    "etiqueta": "ISSUE XV",
+    "titulo": "El Programa",
+    "descripcion": "Cada momento ha sido cuidadosamente preparado para compartir una noche inolvidable.",
+    "actividades": [
+      { "hora": "05", "minutos": "00 PM", "actividad": "Ceremonia", "lugar": "Parroquia San José" },
+      { "hora": "07", "minutos": "00 PM", "actividad": "Recepción", "lugar": "Jardín Las Palmas" },
+      { "hora": "08", "minutos": "00 PM", "actividad": "Cena" },
+      { "hora": "09", "minutos": "00 PM", "actividad": "Vals" },
+      { "hora": "10", "minutos": "00 PM", "actividad": "Baile" }
+    ]
+  },
+  "ubicaciones": {
+    "etiqueta": "DESTINOS",
+    "titulo": "Tu Pase de Acceso",
+    "pases": [
+      {
+        "etiqueta": "DESTINATION 01",
+        "titulo": "CEREMONIA",
+        "lugar": "Parroquia San José",
+        "datos": [
+          { "etiqueta": "BOARDING", "valor": "05:00 PM" },
+          { "etiqueta": "DATE", "valor": "05 SEPT 2026" },
+          { "etiqueta": "DRESS CODE", "valor": "FORMAL" }
+        ],
+        "mapa": "#",
+        "boton": "VER UBICACIÓN →"
+      },
+      {
+        "etiqueta": "DESTINATION 02",
+        "titulo": "CELEBRACIÓN",
+        "lugar": "Jardín Magnolia",
+        "datos": [
+          { "etiqueta": "BOARDING", "valor": "07:00 PM" },
+          { "etiqueta": "DATE", "valor": "05 SEPT 2026" },
+          { "etiqueta": "DRESS CODE", "valor": "FORMAL" }
+        ],
+        "mapa": "#",
+        "boton": "VER UBICACIÓN →"
+      }
+    ]
+  },
+  "vestimenta": {
+    "etiqueta": "THE STYLE EDIT",
+    "titulo": "Dress Code",
+    "subtitulo": "Una noche para brillar y celebrar a lo grande.",
+    "numero": "XV",
+    "etiquetaTarjeta": "CÓDIGO DE VESTIMENTA",
+    "codigo": "Formal glam",
+    "texto": "Elegancia con un toque de fiesta. Reserva el rosa para la protagonista y acompáñanos con tu mejor look."
+  },
+  "regalos": {
+    "etiqueta": "WITH LOVE",
+    "titulo": "Mesa de Regalos",
+    "subtitulo": "El mejor regalo es compartir esta noche conmigo.",
+    "edicion": "XV EDITION",
+    "tituloTarjeta": "Un detalle para recordar",
+    "texto": "Si deseas obsequiarme algo, encontrarás una opción pensada con mucho cariño.",
+    "boton": "VER MESA DE REGALOS",
+    "link": "#"
+  },
+  "confirmacion": {
+    "etiqueta": "RSVP",
+    "titulo": "¿Nos acompañas?",
+    "texto": "Confirma tu asistencia para reservar tu lugar en esta edición especial.",
+    "boton": "CONFIRMAR ASISTENCIA",
+    "whatsapp": ""
+  },
+  "instagram": {
+    "etiqueta": "SOCIAL SNAPSHOTS",
+    "titulo": "Comparte tu mirada",
+    "texto": "Etiqueta tus fotos de esta noche con",
+    "hashtag": "#NYAHXV",
+    "link": "https://instagram.com",
+    "nota": "y forma parte de nuestra edición especial."
+  },
+  "footer": {
+    "etiqueta": "INVITACIÓN DIGITAL",
+    "texto": "Diseñada con intención por",
+    "marca": "MIRAI",
+    "link": "#",
+    "subtitulo": "CREATIVE STUDIO"
+  }
+}

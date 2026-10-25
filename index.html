@@ -17,539 +17,334 @@
   </head>
 
   <body class="">
-    <!-- =========================
-            SOBRE VIRTUAL
-    ========================== -->
-    <div class="envelope-screen" id="envelopeScreen">
-      <div class="envelope">
-        <div class="envelope-flap"></div>
-        <div class="wax-seal" id="openEnvelope"></div>
+    <!-- Todos los textos, fotos y links se editan en contenido.json; aquí solo van variables -->
+    <template id="plantilla">
+      <!-- =========================
+              SOBRE VIRTUAL
+      ========================== -->
+      <div class="envelope-screen" id="envelopeScreen">
+        <div class="envelope">
+          <div class="envelope-flap"></div>
+          <div class="wax-seal" id="openEnvelope"></div>
+        </div>
       </div>
-    </div>
 
-    <div class="invitation-content hidden" id="invitationContent">
-      <div class="container">
-        <!-- =========================
-            MÚSICA
-    ========================== -->
-        <audio id="backgroundMusic" autoplay loop>
-          <source src="./assets/music/background.mp3" type="audio/mpeg" />
-          Tu navegador no soporta el elemento de audio.
-        </audio>
+      <div class="invitation-content hidden" id="invitationContent">
+        <div class="container">
+          <!-- =========================
+              MÚSICA
+          ========================== -->
+          {{#musica}}
+          <audio id="backgroundMusic" autoplay loop>
+            <source src="{{musica.archivo}}" type="audio/mpeg" />
+          </audio>
+          {{/musica}}
 
-        <!-- =========================
-            PORTADA
-    ========================== -->
-        <section id="hero">
-          <div class="hero"></div>
+          <!-- =========================
+              PORTADA
+          ========================== -->
+          <section id="hero">
+            <div class="hero"></div>
 
-          <div class="hero-content">
-            <div class="hero-text">
-              <h1 class="hero-title">
-                Its <br />
-                Party <br />
-                Time!
-              </h1>
-            </div>
-          </div>
-        </section>
-
-        <section id="name">
-          <div class="name">
-            <h2 class="name-xv">NYAH</h2>
-            <p class="edition-xv">XV EDITION</p>
-            <span class="edition-year"> EST. 2027 </span>
-          </div>
-        </section>
-
-        <!-- =========================
-        WELCOME
-    ========================== -->
-        <section id="welcome">
-          <span class="editorial-label"> EDITOR'S NOTE </span>
-
-          <p class="editorial-message">
-            Cada página guarda una historia. Cada detalle, un recuerdo.
-            <br />
-            Hoy comienza un capítulo inolvidable, y quiero compartirlo contigo.
-          </p>
-        </section>
-
-        <!-- =========================
-        FOTOS PRINCIPALES
-    ========================== -->
-        <section id="fotos-principales">
-          <div class="container-fotos">
-            <img src="./assets/img/fotos/foto1.jpg" alt="Foto 1" />
-            <img src="./assets/img/fotos/foto2.jpg" alt="Foto 2" />
-          </div>
-        </section>
-
-        <!-- =========================
-        CUENTA REGRESIVA
-    ========================== -->
-        <section id="countdown">
-          <div class="fecha">
-            <h1>SABADO</h1>
-            <h2>JUNIO 25, 2027</h2>
-          </div>
-          <div class="timer">
-            <h1 class="timer-titulo">Solo faltan:</h1>
-            <ul class="date-time">
-              <li>
-                <div class="time_number" id="dias"></div>
-                <div class="time_txt">Dias</div>
-              </li>
-              <li>
-                <div class="time_number" id="horas"></div>
-                <div class="time_txt">Hrs</div>
-              </li>
-              <li>
-                <div class="time_number" id="minutos"></div>
-                <div class="time_txt">Min</div>
-              </li>
-              <li>
-                <div class="time_number" id="segundos"></div>
-                <div class="time_txt">Seg</div>
-              </li>
-            </ul>
-          </div>
-        </section>
-
-        <section id="calendar" class="section">
-          <div class="editorial-header">
-            <span class="editorial-tag"> SAVE THE DATE </span>
-
-            <h2 class="editorial-title">JUNIO 2027</h2>
-          </div>
-
-          <div class="calendar">
-            <!-- Días -->
-            <div class="day-name">LUN</div>
-            <div class="day-name">MAR</div>
-            <div class="day-name">MIE</div>
-            <div class="day-name">JUE</div>
-            <div class="day-name">VIE</div>
-            <div class="day-name">SAB</div>
-            <div class="day-name">DOM</div>
-
-            <!-- Semana 1 -->
-            <div class="empty"></div>
-            <div class="empty"></div>
-            <div>1</div>
-            <div>2</div>
-            <div>3</div>
-            <div>4</div>
-            <div>5</div>
-
-            <!-- Semana 2 -->
-            <div>6</div>
-            <div>7</div>
-            <div>8</div>
-            <div>9</div>
-            <div>10</div>
-            <div>11</div>
-            <div>12</div>
-
-            <!-- Semana 3 -->
-            <div>13</div>
-            <div>14</div>
-            <div>15</div>
-            <div>16</div>
-            <div>17</div>
-            <div>18</div>
-            <div>19</div>
-
-            <!-- Semana 4 -->
-            <div>20</div>
-            <div>21</div>
-            <div>22</div>
-            <div>23</div>
-            <div>24</div>
-            <div class="event-day">25</div>
-            <div>26</div>
-
-            <!-- Semana 5 -->
-            <div>27</div>
-            <div>28</div>
-            <div>29</div>
-            <div>30</div>
-            <div class="empty"></div>
-            <div class="empty"></div>
-            <div class="empty"></div>
-          </div>
-
-          <a
-            class="btn-calendar"
-            href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Mis+XV&dates=20260919T180000/20260919T230000&details=Te+esperamos+para+celebrar+mi+gran+día.&location=Salón+de+Eventos+Las+Orquídeas"
-            target="_blank"
-          >
-            ADD TO CALENDAR
-          </a>
-        </section>
-
-        <!-- =========================
-        HISTORIA / MENSAJE
-    ========================== -->
-        <section id="editorial-story">
-          <div class="editorial-heading">
-            <span class="editorial-category"> ARTÍCULO PRINCIPAL </span>
-            <h2 class="editorial-title">Un nuevo capítulo comienza</h2>
-            <p class="editorial-subtitle">Edición Especial · Junio 2027</p>
-          </div>
-
-          <figure class="editorial-photo">
-            <img
-              src="assets/img/fotos/foto2.jpg"
-              alt="Sesión editorial de NYAH"
-            />
-
-            <figcaption>
-              NYAH · Fotografía oficial para la Edición XV · Primavera 2027
-            </figcaption>
-          </figure>
-
-          <article class="editorial-article">
-            <p>
-              Hay momentos que llegan para transformar nuestra historia y
-              convertirse en recuerdos que permanecerán para siempre. Después de
-              tantos sueños, ilusiones y preparativos, por fin ha llegado el día
-              de celebrar una etapa muy especial de mi vida.
-            </p>
-
-            <p>
-              Más que una fiesta, este será un instante lleno de emociones,
-              sonrisas y personas que ocupan un lugar importante en mi corazón.
-              Cada detalle ha sido preparado con cariño para compartir contigo
-              una noche inolvidable.
-            </p>
-
-            <p>
-              Gracias por acompañarme a escribir esta nueva página. Tu presencia
-              hará que esta edición sea aún más especial.
-            </p>
-          </article>
-        </section>
-
-        <!-- =========================
-        PADRES Y PADRINOS
-    ========================== -->
-
-        <section class="collage">
-          <div class="card card1">
-            <img src="./assets/img/fotos/foto1.jpg" />
-          </div>
-
-          <div class="card card2">
-            <img src="./assets/img/fotos/foto2.jpg" />
-          </div>
-
-          <div class="card card3">
-            <img src="./assets/img/fotos/foto2.jpg" />
-          </div>
-
-          <div class="card card4">
-            <img src="./assets/img/fotos/foto1.jpg" />
-          </div>
-        </section>
-
-        <section class="section-familia">
-          <div class="familia-container">
-            <span class="familia-subtitulo">CON GRATITUD</span>
-
-            <h2 class="familia-titulo">EN ESTE IMPORTANTE DIA</h2>
-
-            <p class="familia-texto">
-              Este momento no sería el mismo sin el amor, la guía y el apoyo de
-              quienes han caminado a nuestro lado. Gracias a nuestros padres y
-              padrinos por acompañarnos y ser parte de esta historia.
-            </p>
-
-            <div class="linea"></div>
-
-            <div class="familia-grid">
-              <div class="familia-item">
-                <h3>PADRES</h3>
-
-                <p>María Fernanda López</p>
-                <p>José Luis Pérez</p>
-              </div>
-
-              <div class="familia-item">
-                <h3>PADRINOS</h3>
-
-                <p>Patricia Gómez</p>
-                <p>Ricardo Martínez</p>
+            <div class="hero-content">
+              <div class="hero-text">
+                <h1 class="hero-title">{{portada.titulo}}</h1>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
 
-        <!-- =========================
-        CRONOGRAMA
-    ========================== -->
-        <section class="schedule">
-          <div class="schedule-header">
-            <span class="schedule-tag">ISSUE XV</span>
+          <section id="name">
+            <div class="name">
+              <h2 class="name-xv">{{portada.nombre}}</h2>
+              <p class="edition-xv">{{portada.edicion}}</p>
+              <span class="edition-year">{{portada.anio}}</span>
+            </div>
+          </section>
 
-            <h2 class="schedule-title">El Programa</h2>
+          <!-- =========================
+          WELCOME
+          ========================== -->
+          {{#bienvenida}}
+          <section id="welcome">
+            <span class="editorial-label">{{bienvenida.etiqueta}}</span>
+            <p class="editorial-message">{{bienvenida.texto}}</p>
+          </section>
+          {{/bienvenida}}
 
-            <p class="schedule-description">
-              Cada momento ha sido cuidadosamente preparado para compartir una
-              noche inolvidable.
-            </p>
-          </div>
+          <!-- =========================
+          FOTOS PRINCIPALES
+          ========================== -->
+          {{?fotosPrincipales}}
+          <section id="fotos-principales">
+            <div class="container-fotos">
+              {{#fotosPrincipales}}<img src="{{foto}}" alt="{{alt}}" />{{/fotosPrincipales}}
+            </div>
+          </section>
+          {{/fotosPrincipales}}
 
-          <div class="schedule-list">
-            <article class="schedule-item">
-              <div class="schedule-time">
-                <span class="hour">05</span>
-                <span class="minutes">00 PM</span>
-              </div>
+          <!-- =========================
+          CUENTA REGRESIVA (la fecha sale de evento.inicio)
+          ========================== -->
+          {{#cuentaRegresiva}}
+          <section id="countdown">
+            <div class="fecha">
+              <h1>{{cuentaRegresiva.dia}}</h1>
+              <h2>{{cuentaRegresiva.fecha}}</h2>
+            </div>
+            <div class="timer">
+              <h1 class="timer-titulo">{{cuentaRegresiva.titulo}}</h1>
+              <ul class="date-time">
+                <li>
+                  <div class="time_number" id="dias"></div>
+                  <div class="time_txt">{{cuentaRegresiva.dias}}</div>
+                </li>
+                <li>
+                  <div class="time_number" id="horas"></div>
+                  <div class="time_txt">{{cuentaRegresiva.horas}}</div>
+                </li>
+                <li>
+                  <div class="time_number" id="minutos"></div>
+                  <div class="time_txt">{{cuentaRegresiva.minutos}}</div>
+                </li>
+                <li>
+                  <div class="time_number" id="segundos"></div>
+                  <div class="time_txt">{{cuentaRegresiva.segundos}}</div>
+                </li>
+              </ul>
+            </div>
+          </section>
+          {{/cuentaRegresiva}}
 
-              <div class="schedule-content">
-                <span class="number">01</span>
-
-                <h3>Ceremonia</h3>
-
-                <p>Parroquia San José</p>
-              </div>
-            </article>
-
-            <article class="schedule-item">
-              <div class="schedule-time">
-                <span class="hour">07</span>
-                <span class="minutes">00 PM</span>
-              </div>
-
-              <div class="schedule-content">
-                <span class="number">02</span>
-
-                <h3>Recepción</h3>
-
-                <p>Jardín Las Palmas</p>
-              </div>
-            </article>
-
-            <article class="schedule-item">
-              <div class="schedule-time">
-                <span class="hour">08</span>
-                <span class="minutes">00 PM</span>
-              </div>
-
-              <div class="schedule-content">
-                <span class="number">03</span>
-
-                <h3>Cena</h3>
-              </div>
-            </article>
-
-            <article class="schedule-item">
-              <div class="schedule-time">
-                <span class="hour">09</span>
-                <span class="minutes">00 PM</span>
-              </div>
-
-              <div class="schedule-content">
-                <span class="number">04</span>
-
-                <h3>Vals</h3>
-              </div>
-            </article>
-
-            <article class="schedule-item">
-              <div class="schedule-time">
-                <span class="hour">10</span>
-                <span class="minutes">00 PM</span>
-              </div>
-
-              <div class="schedule-content">
-                <span class="number">05</span>
-
-                <h3>Baile</h3>
-              </div>
-            </article>
-          </div>
-        </section>
-
-        <!-- =========================
-        CEREMONIA y RECEPCIÓN
-    ========================== -->
-        <section class="Ubicaciones">
-          <img src="./assets/icons/copas.png" class="ubicacionHero" alt="" />
-        </section>
-
-        <section class="boarding-section">
-          <div class="section-title">
-            <span>DESTINOS</span>
-
-            <h2>Tu Pase de Acceso</h2>
-          </div>
-
-          <article class="boarding-pass left">
-            <div class="ticket-cut left-cut"></div>
-            <div class="ticket-cut right-cut"></div>
-
-            <small>DESTINATION 01</small>
-
-            <h3>CEREMONIA</h3>
-
-            <h4>Parroquia San José</h4>
-
-            <div class="ticket-divider"></div>
-
-            <div class="ticket-info">
-              <div>
-                <span>BOARDING</span>
-                <strong>05:00 PM</strong>
-              </div>
-
-              <div>
-                <span>DATE</span>
-                <strong>05 SEPT 2026</strong>
-              </div>
-
-              <div>
-                <span>DRESS CODE</span>
-                <strong>FORMAL</strong>
-              </div>
+          <!-- CALENDARIO (los días los arma script.js con evento.inicio) -->
+          {{#calendario}}
+          <section id="calendar" class="section">
+            <div class="editorial-header">
+              <span class="editorial-tag">{{calendario.etiqueta}}</span>
+              <h2 class="editorial-title">{{calendario.titulo}}</h2>
             </div>
 
-            <a href="#"> VER UBICACIÓN → </a>
-          </article>
+            <div class="calendar" id="calendarGrid"></div>
 
-          <article class="boarding-pass right">
-            <div class="ticket-cut left-cut"></div>
-            <div class="ticket-cut right-cut"></div>
+            <a class="btn-calendar" id="btnCalendar" href="#" target="_blank">{{calendario.boton}}</a>
+          </section>
+          {{/calendario}}
 
-            <small>DESTINATION 02</small>
-
-            <h3>CELEBRACIÓN</h3>
-
-            <h4>Jardín Magnolia</h4>
-
-            <div class="ticket-divider"></div>
-
-            <div class="ticket-info">
-              <div>
-                <span>BOARDING</span>
-                <strong>07:00 PM</strong>
-              </div>
-
-              <div>
-                <span>DATE</span>
-                <strong>05 SEPT 2026</strong>
-              </div>
-
-              <div>
-                <span>DRESS CODE</span>
-                <strong>FORMAL</strong>
-              </div>
+          <!-- =========================
+          HISTORIA / MENSAJE
+          ========================== -->
+          {{#historia}}
+          <section id="editorial-story">
+            <div class="editorial-heading">
+              <span class="editorial-category">{{historia.categoria}}</span>
+              <h2 class="editorial-title">{{historia.titulo}}</h2>
+              <p class="editorial-subtitle">{{historia.subtitulo}}</p>
             </div>
 
-            <a href="#"> VER UBICACIÓN → </a>
-          </article>
-        </section>
-        <!-- =========================
-        DRESS CODE
-    ========================== -->
-        <section id="dresscode" class="dresscode-section">
-          <div class="dresscode-heading">
-            <span class="editorial-tag">THE STYLE EDIT</span>
-            <h2>Dress Code</h2>
-            <p>Una noche para brillar y celebrar a lo grande.</p>
-          </div>
+            <figure class="editorial-photo">
+              <img src="{{historia.foto}}" alt="{{historia.fotoAlt}}" />
+              <figcaption>{{historia.pieDeFoto}}</figcaption>
+            </figure>
 
-          <div class="dresscode-card">
-            <span class="dresscode-number">XV</span>
-            <p class="dresscode-label">CÓDIGO DE VESTIMENTA</p>
-            <h3>Formal glam</h3>
-            <div class="dresscode-line"></div>
-            <p class="dresscode-copy">
-              Elegancia con un toque de fiesta. Reserva el rosa para la
-              protagonista y acompáñanos con tu mejor look.
-            </p>
-          </div>
-        </section>
-        <!-- =========================
-        MESA DE REGALOS
-    ========================== -->
-        <section id="gifts" class="gifts-section">
-          <div class="gifts-heading">
-            <span class="editorial-tag">WITH LOVE</span>
-            <h2>Mesa de Regalos</h2>
-            <p>El mejor regalo es compartir esta noche conmigo.</p>
-          </div>
+            <article class="editorial-article">
+              {{#historia.parrafos}}<p>{{.}}</p>{{/historia.parrafos}}
+            </article>
+          </section>
+          {{/historia}}
 
-          <div class="gifts-card">
-            <span class="gifts-edition">XV EDITION</span>
-            <h3>Un detalle para recordar</h3>
-            <p>
-              Si deseas obsequiarme algo, encontrarás una opción pensada con
-              mucho cariño.
-            </p>
-            <a
-              class="gifts-link"
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              VER MESA DE REGALOS <span aria-hidden="true">→</span>
-            </a>
-          </div>
-        </section>
+          <!-- =========================
+          PADRES Y PADRINOS
+          ========================== -->
+          {{?collage}}
+          <section class="collage">
+            {{#collage}}
+            <div class="card card{{@indice}}">
+              <img src="{{.}}" />
+            </div>
+            {{/collage}}
+          </section>
+          {{/collage}}
 
-        <!-- =========================
-        CONFIRMACIÓN
-    ========================== -->
-        <section id="rsvp" class="rsvp-section">
-          <div class="rsvp-card">
-            <span class="editorial-tag">RSVP</span>
-            <h2>¿Nos acompañas?</h2>
-            <p>
-              Confirma tu asistencia para reservar tu lugar en esta edición
-              especial.
-            </p>
-            <a
-              class="rsvp-link"
-              href="https://wa.me/"
-              target="_blank"
-              rel="noopener noreferrer"
-              >CONFIRMAR ASISTENCIA <span aria-hidden="true">→</span></a
-            >
-          </div>
-        </section>
+          {{#familia}}
+          <section class="section-familia">
+            <div class="familia-container">
+              <span class="familia-subtitulo">{{familia.subtitulo}}</span>
+              <h2 class="familia-titulo">{{familia.titulo}}</h2>
+              <p class="familia-texto">{{familia.texto}}</p>
 
-        <!-- =========================
-        SECCIÓN EXTRA
-    ========================== -->
-        <section id="extras" class="social-section">
-          <span class="editorial-tag">SOCIAL SNAPSHOTS</span>
-          <h2>Comparte tu mirada</h2>
-          <p>Etiqueta tus fotos de esta noche con</p>
-          <a
-            class="social-hashtag"
-            href="https://instagram.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            >#NYAHXV</a
-          >
-          <p class="social-note">y forma parte de nuestra edición especial.</p>
-        </section>
+              <div class="linea"></div>
 
-        <!-- =========================
-            FOOTER
-    ========================== -->
-        <footer class="mirai-footer">
-          <span>INVITACIÓN DIGITAL</span>
-          <p>Diseñada con intención por</p>
-          <a href="#" aria-label="Mirai">MIRAI</a>
-          <small>CREATIVE STUDIO</small>
-        </footer>
+              <div class="familia-grid">
+                {{#familia.grupos}}
+                <div class="familia-item">
+                  <h3>{{titulo}}</h3>
+                  {{#nombres}}<p>{{.}}</p>{{/nombres}}
+                </div>
+                {{/familia.grupos}}
+              </div>
+            </div>
+          </section>
+          {{/familia}}
+
+          <!-- =========================
+          CRONOGRAMA
+          ========================== -->
+          {{#cronograma}}
+          <section class="schedule">
+            <div class="schedule-header">
+              <span class="schedule-tag">{{cronograma.etiqueta}}</span>
+              <h2 class="schedule-title">{{cronograma.titulo}}</h2>
+              <p class="schedule-description">{{cronograma.descripcion}}</p>
+            </div>
+
+            <div class="schedule-list">
+              {{#cronograma.actividades}}
+              <article class="schedule-item">
+                <div class="schedule-time">
+                  <span class="hour">{{hora}}</span>
+                  <span class="minutes">{{minutos}}</span>
+                </div>
+
+                <div class="schedule-content">
+                  <span class="number">{{@numero}}</span>
+                  <h3>{{actividad}}</h3>
+                  {{#lugar}}<p>{{lugar}}</p>{{/lugar}}
+                </div>
+              </article>
+              {{/cronograma.actividades}}
+            </div>
+          </section>
+          {{/cronograma}}
+
+          <!-- =========================
+          CEREMONIA y RECEPCIÓN
+          ========================== -->
+          {{#ubicaciones}}
+          <section class="Ubicaciones">
+            <img src="./assets/icons/copas.png" class="ubicacionHero" alt="" />
+          </section>
+
+          <section class="boarding-section">
+            <div class="section-title">
+              <span>{{ubicaciones.etiqueta}}</span>
+              <h2>{{ubicaciones.titulo}}</h2>
+            </div>
+
+            {{#ubicaciones.pases}}
+            <article class="boarding-pass {{@lado}}">
+              <div class="ticket-cut left-cut"></div>
+              <div class="ticket-cut right-cut"></div>
+
+              <small>{{etiqueta}}</small>
+              <h3>{{titulo}}</h3>
+              <h4>{{lugar}}</h4>
+
+              <div class="ticket-divider"></div>
+
+              <div class="ticket-info">
+                {{#datos}}
+                <div>
+                  <span>{{etiqueta}}</span>
+                  <strong>{{valor}}</strong>
+                </div>
+                {{/datos}}
+              </div>
+
+              <a href="{{mapa}}" target="_blank">{{boton}}</a>
+            </article>
+            {{/ubicaciones.pases}}
+          </section>
+          {{/ubicaciones}}
+
+          <!-- =========================
+          DRESS CODE
+          ========================== -->
+          {{#vestimenta}}
+          <section id="dresscode" class="dresscode-section">
+            <div class="dresscode-heading">
+              <span class="editorial-tag">{{vestimenta.etiqueta}}</span>
+              <h2>{{vestimenta.titulo}}</h2>
+              <p>{{vestimenta.subtitulo}}</p>
+            </div>
+
+            <div class="dresscode-card">
+              <span class="dresscode-number">{{vestimenta.numero}}</span>
+              <p class="dresscode-label">{{vestimenta.etiquetaTarjeta}}</p>
+              <h3>{{vestimenta.codigo}}</h3>
+              <div class="dresscode-line"></div>
+              <p class="dresscode-copy">{{vestimenta.texto}}</p>
+            </div>
+          </section>
+          {{/vestimenta}}
+
+          <!-- =========================
+          MESA DE REGALOS
+          ========================== -->
+          {{#regalos}}
+          <section id="gifts" class="gifts-section">
+            <div class="gifts-heading">
+              <span class="editorial-tag">{{regalos.etiqueta}}</span>
+              <h2>{{regalos.titulo}}</h2>
+              <p>{{regalos.subtitulo}}</p>
+            </div>
+
+            <div class="gifts-card">
+              <span class="gifts-edition">{{regalos.edicion}}</span>
+              <h3>{{regalos.tituloTarjeta}}</h3>
+              <p>{{regalos.texto}}</p>
+              {{#regalos.boton}}
+              <a class="gifts-link" href="{{regalos.link}}" target="_blank" rel="noopener noreferrer">
+                {{regalos.boton}} <span aria-hidden="true">→</span>
+              </a>
+              {{/regalos.boton}}
+            </div>
+          </section>
+          {{/regalos}}
+
+          <!-- =========================
+          CONFIRMACIÓN (el número va en confirmacion.whatsapp)
+          ========================== -->
+          {{#confirmacion}}
+          <section id="rsvp" class="rsvp-section">
+            <div class="rsvp-card">
+              <span class="editorial-tag">{{confirmacion.etiqueta}}</span>
+              <h2>{{confirmacion.titulo}}</h2>
+              <p>{{confirmacion.texto}}</p>
+              <a class="rsvp-link" href="https://wa.me/{{confirmacion.whatsapp}}" target="_blank" rel="noopener noreferrer"
+                >{{confirmacion.boton}} <span aria-hidden="true">→</span></a
+              >
+            </div>
+          </section>
+          {{/confirmacion}}
+
+          <!-- =========================
+          SECCIÓN EXTRA
+          ========================== -->
+          {{#instagram}}
+          <section id="extras" class="social-section">
+            <span class="editorial-tag">{{instagram.etiqueta}}</span>
+            <h2>{{instagram.titulo}}</h2>
+            <p>{{instagram.texto}}</p>
+            <a class="social-hashtag" href="{{instagram.link}}" target="_blank" rel="noopener noreferrer">{{instagram.hashtag}}</a>
+            <p class="social-note">{{instagram.nota}}</p>
+          </section>
+          {{/instagram}}
+
+          <!-- =========================
+              FOOTER
+          ========================== -->
+          <footer class="mirai-footer">
+            <span>{{footer.etiqueta}}</span>
+            <p>{{footer.texto}}</p>
+            <a href="{{footer.link}}" aria-label="{{footer.marca}}">{{footer.marca}}</a>
+            <small>{{footer.subtitulo}}</small>
+          </footer>
+        </div>
       </div>
-    </div>
 
-    <!-- JavaScript -->
-    <script src="js/script.js"></script>
+      <!-- JavaScript -->
+      <script src="js/script.js"></script>
+    </template>
+
+    <script src="js/motor.js"></script>
   </body>
 </html>
